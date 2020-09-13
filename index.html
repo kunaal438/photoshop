@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshop CC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="img-window">
+        <img src="img/nature.jpg" alt="">
+    </div>
+    <div class="settings-window">
+        <div class="settings-parent">
+            <p class="setting active">brightness</p>
+            <p class="setting">saturation</p>
+            <p class="setting">contrast</p>
+            <p class="setting">blur</p>
+            <p class="setting">hue</p>
+        </div>
+        <div class="slider-parent">
+            <div class="box">
+                <span class="fill"></span>
+            </div>
+            <input type="range" value="1" min="0" max="10" value="5" step=".1" id="slider">
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

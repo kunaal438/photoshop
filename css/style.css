@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    background: #3f3f3f;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-column-gap: 3vw;
+    overflow-x: hidden;
+}
+
+.img-window,
+.settings-window{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.img-window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.img-window img{
+    width: 100%;
+}
+
+.settings-window{
+    padding: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    background: #000;
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
+.settings-window .settings-parent,
+.settings-window .slider-parent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.settings-window .slider-parent{
+    padding: 0 80px 30px 30px;
+    position: relative;
+}
+
+.settings-window .setting{
+    width: 100%;
+    height: 60px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    line-height: 60px;
+    padding-left: 30px;
+    color: #fff;
+    cursor: pointer;
+}   
+
+.setting:hover,
+.setting.active{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#slider{
+    margin-top: 40px;
+    -webkit-appearance: none;
+    outline: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgb(0, 102, 255);
+    cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb:hover{
+    box-shadow: 0 0 0 10px rgba(19, 113, 255, 0.3);
+}
+
+#slider::-webkit-slider-thumb:active{
+    box-shadow: 0 0 0 20px rgba(19, 113, 255, 0.3);
+}
+
+.box{
+    position: relative;
+    width: 100%;
+}
+
+.fill{
+    position: absolute;
+    width: 10%;
+    pointer-events: none;
+    z-index: 1;
+    height: 6px;
+    border-radius: 20px;
+    top: 40px;
+    left: 0px;
+    background: rgb(0, 102, 255);
+}
+
+@media screen and (max-width: 740px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 30px;
+        overflow-y: scroll;
+        padding-top: 30px;
+    }
+    .settings-window{
+        height: fit-content;
+        grid-template-rows: 80% 20%;
+    }
+}
+
+@media screen and (max-width: 488px){
+    
+}
